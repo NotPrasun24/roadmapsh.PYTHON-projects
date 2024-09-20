@@ -27,11 +27,11 @@ def easy():
             elif guess > 50 or guess < 1:
                 print("\nYou have to guess within 1 to 50")
             elif guess < number:
-                print("You guessed too low, try getting higher\n")
+                print("You guessed too low, try guessing higher\n")
                 guesses -= 1
                 print(f"You have {guesses} guesses left")
             elif guess > number:
-                print("You guessed too high, try getting lower\n")
+                print("You guessed too high, try guessing lower\n")
                 guesses -= 1
                 print(f"You have {guesses} guesses left")
 
@@ -47,42 +47,61 @@ def easy():
 
 def medium():
     print("———————"*5)
-    print("\nGreat, You have decided to go with hard level")
+    print("\nGreat, You have decided to go with Medium level")
     print("Now you have 3 chance use it wisely. Good Luck!!!\n")
     print("The correct number is between (1-50) ")
-    gusess = 3
+    guesses = 3
     number = random.randint(1,50)
-    while gusess > 0:
-
+    while guesses > 0:
         try:
-            
-            guess = int(input("Enter your guess: \n"))
+
+            guess = int(input("Enter your guess: "))
             if guess == number:
-                print("Congralutation you have won!\n")
+                print("\nCongralutation you have won!\n")
                 playagain(medium)
                 break
             elif guess > 50 or guess < 1:
-                print("You have to guess between 1 to 50 ")
+                print("\nYou have to guess between 1 to 50 ")
             elif guess > number:
-                print("You guessed too high, try getting lower\n")
+                print("You guessed too high, try guessing lower\n")
                 guesses -= 1
-                print(f"You have {gusess} left now")
+                print(f"You have {guesses} left now")
             elif guess < number:
-                print("You guessed too low, try getting higher\n")
+                print("You guessed too low, try guessing higher\n")
                 guesses -= 1
-                print(f"You have {gusess} left now")
-
-            if guess == 0 and guess != number:
-                print("Game Over, You have lost!! The correct answer was " + str(number))
+                print(f"You have {guesses} left now")
+            if guesses == 0 and guess != number:
+                print("\n GAMES OVER, You have lost!! The correct answer was " + str(number))
                 playagain(medium)
-
-
         except ValueError:
             print("\nPlease enter number, not string")
         
 
-
-
+def difficult():
+    
+    print("———————"*5)
+    print("\nGreat, You have decided to go with Difficult level")
+    print("Now you have 3 chance use it wisely. Good Luck!!!\n")
+    print("The correct number is between (1-50) ")
+    guesses = 1
+    number = random.randint(1,50)
+    while guesses > 0:
+        try:
+            guess = int(input("Enter your guess: "))
+            if guess > 50 or guess < 1:
+                print("\nSorry, You have to guess between 1 to 50 \n")
+            elif guess == number:
+                print("\nCongralutations, You have won the Hardest level of all\n")
+                playagain(difficult)
+            elif guess > number:
+                guesses -= 1
+            elif guess < number:
+                guesses -= 1
+            if guesses == 0 :
+                print("\nGAMES OVER, You have lost!! The correct answer was " + str(number))
+                playagain(difficult)
+        except ValueError:
+            print("\nPlease enter number, not string")
 
 
 def playagain(level_function):
@@ -92,6 +111,8 @@ def playagain(level_function):
         level_function()
     elif again == "2":
         print("Thanks for playing the game!!")
+        print("———————"*5)
+
         gamemenu()
     else:
         print("Please enter the correct number!")
@@ -113,6 +134,8 @@ def gamemenu():
             easy()
         elif choice == 2:
             medium()
+        elif choice == 3:
+            difficult()
 
         else:
             print("PLEASE ENTER CORRECT NUMBER")
