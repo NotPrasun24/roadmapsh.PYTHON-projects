@@ -1,5 +1,14 @@
 *{
     padding: 0px;
     margin: 0px;
-    
+}
+
+body{
+    width: 100px;
+    height: 100vh;
+}
+
+.main{
+    display: flex;
+    background-color: lightblue;
 }
