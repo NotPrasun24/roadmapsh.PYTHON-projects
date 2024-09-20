@@ -2,25 +2,23 @@
     margin: 0;
     padding: 0;
 }
-/* Hide the default icon on Chrome, Safari, Edge */
+
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
 .main{
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Align horizontally to the center */
-    justify-content: center; /* Align vertically to the center */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     height: 100vh; 
-    /* background-color: aqua; */
 }
 .first{
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 input{
@@ -40,7 +38,6 @@ ion-icon{
 .calendar{
     border: 2px solid black;
     margin-top: 2px;
-    /* margin: auto; */
     font-family:Arial, Helvetica, sans-serif;
     
 }
@@ -52,37 +49,30 @@ ion-icon{
     margin-bottom: 20px;
     
 }
-.dec{
-    /* height: 100px; */
-    
+.dec{    
     text-align:center;
     font-size: 15px;
-    /* letter-spacing: 1px; */
+    letter-spacing: 1px;
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0px 10px;
 }
+
 #smt{
-    
-    border-collapse: collapse; 
+
+    margin-left: -10px;
+    border-collapse: collapse;     
 }
-#smt th{
-    padding: 2px;
-    border: none;
-    border-style: none;
-    /* color: aqua; */
-    /* row-gap: 10px; */
-    /* gap: 10px; */
-    padding:x;
-}
+
+
 .dec table{
     border: none;
 }
 table,td{  
-    border-collapse: collapse; /* Makes borders touch each other */
+    border-collapse: collapse;
     padding: 10px 10px;
     text-align: center;
-    border: 1px solid #000; /* Optional border for cells */
+    border: 1px solid #050505;
 }
