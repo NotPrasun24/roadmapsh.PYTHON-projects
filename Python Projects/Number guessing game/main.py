@@ -46,7 +46,7 @@ def easy():
      
 
 def playagain():
-    print("Press 1 to try again \nOr press 2 to exit the game!")
+    print("\nPress 1 to try again \nOr press 2 to exit the game!")
     again = input("What would you like to do: ")
     if again == "1":
         easy()
