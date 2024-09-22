@@ -10,20 +10,14 @@ body{
 .cent{
     display: grid;
     justify-content:center;
-    /* height: 100vh; */
-    /* width: 100%; */
-    border: 2px solid red;
-    grid-template-rows: auto auto; /* Allow divs to stack */
-
-
-
+    grid-template-rows: auto auto; 
 }
+
 .main{
     display: flex;
     gap: 20px;
     height: 250px;
     width: 600px;
-    border: 1px solid red;
     margin-top: 20px;
     font-size: 15px;
 
@@ -35,7 +29,6 @@ body{
     border-radius: 10px;
     height: 100px;
 
-    /* border-style: none; */
 }
 .paragraph.left::after{
     content: '';
@@ -95,10 +88,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     width: 600px;
     height: 220px;
-    border: 1px solid blue;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 40px;
 }
 
@@ -119,19 +110,66 @@ body{
 .aboutgirl h3{
     color: rgba(255, 255, 255, 0.822);
 }
+
 .final {
     width: 600px;
-    height: 200px;
+    height: 300px;
     margin-top: 10px;
     border: 2px solid black;
     border-radius: 20px;
-    display: flex;
-    text-align: center;
     align-items: center;
     font-family:Arial, Helvetica, sans-serif ;
 }
 .final p{
-    padding: 0px 150px 60px 90px;
+    padding: 40px 60px 30px 90px;
 }
 
 
+.carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 120px;
+
+}
+
+.profile-circles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.profile.active {
+    opacity: 3;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.profile-name {
+    margin: -40px;
+    margin-left: 175px;
+    font-size: 14px;
+
+}
